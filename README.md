@@ -34,5 +34,7 @@ OR
 have to set an upstream branch with -u for the feature branch with
     git push -u origin feature1
 
-now can just do 
+now can just do
     git push
+
+then once the feature1 is in the remote repo, do a pull request into staging branch
