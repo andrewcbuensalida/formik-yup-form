@@ -92,3 +92,5 @@ if you make changes while detached, even if you commit it, it will be lost. have
 pull request merges create an extra commit, but pushing directly doesn't.
 
 1
+
+2
