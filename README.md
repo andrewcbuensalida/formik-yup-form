@@ -28,6 +28,7 @@ git pull first does a git fetch which updates all the tracking branches with its
 ////////////////////////////////////////////////////////////////////
 to make a pr from the cmd, checkout feature branch, then
     gh pr create --base <branch you want to merge into, probably staging>
+this will create the feature branch in github, then make a pull request to staging
 
 OR 
 
