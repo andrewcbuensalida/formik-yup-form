@@ -48,7 +48,7 @@ to see the freshest branches
 when there is a divergence in two branches and you try to merge, even if it was in different files, it wont be a fast forward, it will be a recursive strategy, meaning it will create a merge commit.
 
 ////////////////////////////////////////////
-there wont be a merge conflict if the change is on different lines
+there wont be a merge conflict as long as the change is two lines away, aka not neigboring line aka not adjacent line.
 
 /////////////////////////////
 
