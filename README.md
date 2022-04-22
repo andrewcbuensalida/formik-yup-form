@@ -23,15 +23,14 @@ workflow is, clone repo, checkout staging, checkout a new feature branch from st
     git fetch
 to update tracking branches with remote branches, then 
     git difftool origin/staging
-to see the diff of what others have done to make sure no conflict, then 
+to see the diff of what others have done to make sure there's no conflict, then 
     git rebase origin/staging
-this is to make sure the changes made by other developers that are in remote staging get merged into your local feature branch, but without the extra merge commit.
+this is to make sure the changes made by other developers that are in remote staging get merged into your local feature branch, but without the extra merge commit because it's rebase, not merge.
 
-If you're fairly certain there's no conflict and you want to save time,
+If you're fairly certain there will be no conflict and you want to save time,
     git pull --rebase origin staging
-    
-git pull first does a git fetch which updates all the tracking branches with its corresponding remote branch, then (if it's just git pull) merges current branch with its tracking branch, but if the origin and remote branch is specified (eg. git pull origin staging) then it will merge that remote branch into the current(head) branch.
-
+git pull first does a git fetch which updates all the tracking branches with its corresponding remote branch, then (if it's just git pull) merges current(head) branch with its tracking branch, but if the origin and remote branch are specified (eg. git pull origin staging) then it will merge that remote branch into the current(head) branch.
+Now you can do the pull request below
 
 ////////////////////////////////////////////////////////////////////
 to make a pr from the cmd, checkout feature branch, then
