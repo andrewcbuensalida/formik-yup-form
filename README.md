@@ -13,4 +13,9 @@ add this to User/user/.gitconfig
   cmd = code --wait $MERGED
 
  then in cmd, checkout branch, then
-    git difftool origin/staging
+    git difftool origin/
+    
+////////////////////////////////////////////////////////////////
+
+to make a pr from the cmd, checkout feature branch, then
+    gh pr create --base <branch you want to merge into>

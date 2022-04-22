@@ -4,7 +4,6 @@ import { Formik, Form, useField } from "formik";
 import * as Yup from "yup";
 
 const MyTextInput = ({ label, ...props }) => { 
-  //feature1 change2
 	// useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
 	// which we can spread on <input>. We can use field meta to show an error
 	// message if the field is invalid and it has been touched (i.e. visited)
