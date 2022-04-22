@@ -56,7 +56,7 @@ if there's a conflict, do
     git merge --abort
 /////////////////////////////////////
 
-if there's an unstaged change on feature, then merge master, it'll say it's already up to date.
+if there's an unstaged change on feature, then merge master, it'll say it's already up to date, as long as master didnt change.
 
 ////////////////////////////////////////
 
@@ -64,4 +64,6 @@ if you stage a change, then make another change in the same file, it wont be sta
 
 
 ////////////////////////////////////////
-child c1 after first change
+merging takes the changes of the branch that you choose into the current branch that you're on.
+
+////////////////////////////////////////////
