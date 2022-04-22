@@ -38,3 +38,7 @@ now can just do
     git push
 
 then once the feature1 is in the remote repo, do a pull request into staging branch
+
+////////////////////////////////////////////////////////////////////////////////
+to see the freshest branches
+    git branch --sort=-committerdate -a
