@@ -1,4 +1,4 @@
-//staging 100
+//change remote then push from local yeah
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
