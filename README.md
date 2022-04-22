@@ -15,12 +15,16 @@ add this to User/user/.gitconfig
 then in cmd, checkout branch, then to check the differences of what other developers have done to the staging branch
 to update tracking branches with the remote branches,
     git fetch
-then
+then on local staging branch
     git difftool origin/staging
     
 ////////////////////////////////////////////////////////////////
-workflow is, make changes on feature branch, then when ready, on feature branch, do a 
-    git pull origin staging
+workflow is, clone repo, checkout staging, checkout a new feature branch from staging, make changes on feature branch, then when ready to push, on feature branch, do a 
+    git fetch
+to update tracking branches to remote branches, then 
+    git difftool origin/staging
+to see the diff of what others have done to make sure no conflict, then 
+    git merge origin/staging
 this is to make sure the changes made by other developers that are in remote staging get merged into your local feature branch.
 git pull first does a git fetch which updates all the tracking branches with its corresponding remote branch, then (if it's just git pull) merges current branch with its tracking branch, but if the origin and remote branch is specified (eg. git pull origin staging) then it will merge that remote branch into the current(head) branch.
 
