@@ -60,4 +60,8 @@ if there's an unstaged change on feature, then merge master, it'll say it's alre
 
 ////////////////////////////////////////
 
-child c1
+if you stage a change, then make another change in the same file, it wont be staged, and therefore wont be included in the commit. you would have to do git add . again to include it.
+
+
+////////////////////////////////////////
+child c1 after first change
