@@ -31,4 +31,6 @@ to make a pr from the cmd, checkout feature branch, then
 
 OR 
 
+have to set an upstream branch for the feature branch with
+
     git push origin feature1
