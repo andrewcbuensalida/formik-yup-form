@@ -1,4 +1,4 @@
-//master change for rebase
+//staging for pull rebase 1
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
