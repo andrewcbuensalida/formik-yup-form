@@ -1,4 +1,4 @@
-//change conflict3
+//master change1
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
