@@ -85,4 +85,4 @@ if you try to merge from a newer commit to an older commit or a commit on a diff
 
 
 /////////////////////////////////////////////
-if you make changes while detached, and you dont commit it, it will be lost
+if you make changes while detached, even if you commit it, it will be lost. have to create a branch.
