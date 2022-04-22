@@ -47,6 +47,7 @@ now can just do
 
 then once the feature1 is in the remote repo, do a pull request into staging branch
 
+DONT DO REBASE AFTER PULL REQUEST, just do merge to update if you're still working on your feature branch after making the pull request
 ////////////////////////////////////////////////////////////////////////////////
 to see the freshest branches
     git branch --sort=-committerdate -a
@@ -91,6 +92,9 @@ if you make changes while detached, even if you commit it, it will be lost. have
 /////////////////////////////////////////////
 pull request merges create an extra commit, but pushing directly doesn't.
 
-1
 
-2
+100
+
+
+200
+
