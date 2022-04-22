@@ -31,6 +31,8 @@ to make a pr from the cmd, checkout feature branch, then
 
 OR 
 
-have to set an upstream branch for the feature branch with
+have to set an upstream branch with -u for the feature branch with
+    git push -u origin feature1
 
-    git push origin feature1
+now can just do 
+    git push
