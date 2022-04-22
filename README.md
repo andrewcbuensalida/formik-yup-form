@@ -82,3 +82,7 @@ checking out a tracking branch like origin/feature-x will create a local branch 
 
 ///////////////////////////////////////
 if you try to merge from a newer commit to an older commit or a commit on a different branch that doesnt diverge, itll say it's already up to day. but if it diverges, itll try to merge.
+
+
+/////////////////////////////////////////////
+if you make changes while detached, and you dont commit it, it will be lost
