@@ -81,7 +81,8 @@ checking out a tracking branch like origin/feature-x will create a local branch 
 
 
 ///////////////////////////////////////
-if you try to merge from a newer commit to an older commit or a commit on a different branch that doesnt diverge, itll say it's already up to day. but if it diverges, itll try to merge.
+if you try to merge on a newer commit with an older commit or a commit on a different branch that doesnt diverge, itll say it's already up to date. but if it diverges, itll try to merge.
+if you try to merge on an older commit that doesnt diverge, with a new commit, itll move the head to the newer commit but stay on that commit. weird.
 
 
 /////////////////////////////////////////////
