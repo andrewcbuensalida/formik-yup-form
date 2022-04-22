@@ -21,11 +21,15 @@ then on local staging branch
 ////////////////////////////////////////////////////////////////
 workflow is, clone repo, checkout staging, checkout a new feature branch from staging, make changes on feature branch, then when ready to push, on feature branch, do a 
     git fetch
-to update tracking branches to remote branches, then 
+to update tracking branches with remote branches, then 
     git difftool origin/staging
 to see the diff of what others have done to make sure no conflict, then 
-    git merge origin/staging
-this is to make sure the changes made by other developers that are in remote staging get merged into your local feature branch.
+    git rebase origin/staging
+this is to make sure the changes made by other developers that are in remote staging get merged into your local feature branch, but without the extra merge commit.
+
+If you're fairly certain there's no conflict and you want to save time,
+    git pull --rebase origin staging
+    
 git pull first does a git fetch which updates all the tracking branches with its corresponding remote branch, then (if it's just git pull) merges current branch with its tracking branch, but if the origin and remote branch is specified (eg. git pull origin staging) then it will merge that remote branch into the current(head) branch.
 
 
@@ -72,3 +76,5 @@ if you stage a change, then make another change in the same file, it wont be sta
 merging takes the changes of the branch that you choose into the current branch that you're on.
 
 ////////////////////////////////////////////
+
+checking out a tracking branch like origin/feature-x will create a local branch of the name feature-x if it doesnt exist already
