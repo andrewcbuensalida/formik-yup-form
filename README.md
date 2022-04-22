@@ -55,3 +55,9 @@ there wont be a merge conflict as long as the change is two lines away, aka not 
 if there's a conflict, do
     git merge --abort
 /////////////////////////////////////
+
+if there's an unstaged change on feature, then merge master, it'll say it's already up to date.
+
+////////////////////////////////////////
+
+child c1
