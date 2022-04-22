@@ -46,3 +46,12 @@ to see the freshest branches
 
 ////////////////////////////////////////////////////////////////////////////////
 when there is a divergence in two branches and you try to merge, even if it was in different files, it wont be a fast forward, it will be a recursive strategy, meaning it will create a merge commit.
+
+////////////////////////////////////////////
+there wont be a merge conflict if the change is on different lines
+
+/////////////////////////////
+
+if there's a conflict, do
+    git merge --abort
+/////////////////////////////////////
