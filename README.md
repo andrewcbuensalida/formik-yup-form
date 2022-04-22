@@ -42,3 +42,7 @@ then once the feature1 is in the remote repo, do a pull request into staging bra
 ////////////////////////////////////////////////////////////////////////////////
 to see the freshest branches
     git branch --sort=-committerdate -a
+
+
+////////////////////////////////////////////////////////////////////////////////
+when there is a divergence in two branches and you try to merge, even if it was in different files, it wont be a fast forward, it will be a recursive strategy, meaning it will create a merge commit.
