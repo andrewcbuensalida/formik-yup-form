@@ -78,3 +78,7 @@ merging takes the changes of the branch that you choose into the current branch 
 ////////////////////////////////////////////
 
 checking out a tracking branch like origin/feature-x will create a local branch of the name feature-x if it doesnt exist already
+
+
+///////////////////////////////////////
+if you try to merge from a newer commit to an older commit or a commit on a different branch that doesnt diverge, itll say it's already up to day. but if it diverges, itll try to merge.
