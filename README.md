@@ -40,12 +40,10 @@ this will create the feature branch in github, then make a pull request to stagi
 
 OR 
 
-have to set an upstream branch with -u for the feature branch with
+(first method is better)have to set an upstream branch with -u for the feature branch with
     git push -u origin feature1
-
 now can just do
     git push
-
 then once the feature1 is in the remote repo, do a pull request into staging branch
 
 DONT DO REBASE AFTER PULL REQUEST, just do merge to update if you're still working on your feature branch after making the pull request
@@ -53,7 +51,24 @@ DONT DO REBASE AFTER PULL REQUEST, just do merge to update if you're still worki
 to list open pull requests, 
     gh pr list
 
-Once pr is approved on gh, they can delete that branch
+while waiting for pr approval, can work on feature2 that was branched from feature1
+    git checkout -b feature2
+
+if there needs to be changes in feature1, when you need to pause development on feature2, this will remove changes and save it to a stash
+    git stash
+    OR
+    git stash push -m 'name of stash'
+then fix feature1, then when you want to get back the stash, check the stash with
+    git stash list
+then, to recover the latest stash
+    git stash pop
+    OR to recover a specific stash
+    git stash pop 'stash@{n}'
+
+Once pr is approved on gh, they can delete the remote feature1 branch on gh, you can delete local feature1 with
+    git branch -D feature1
+
+
 ////////////////////////////////////////////////////////////////////////////////
 to see the freshest branches
     git branch --sort=-committerdate -a
@@ -64,6 +79,7 @@ when there is a divergence in two branches and you try to merge, even if it was 
 
 ////////////////////////////////////////////
 there wont be a merge conflict as long as the change is two lines away, aka not neigboring line aka not adjacent line.
+even if it gets shifted down, there wont be a conflict.
 
 /////////////////////////////
 
@@ -115,9 +131,9 @@ when want to overwrite a remote with the local and there's a conflict,
 when merging, current change is the one in head(currently looking at) and incoming change is the change you want to apply to the current. It is opposite for rebase.
 
 
-1 2space1
+1 testing 
 2
-3 remote staging1
+3
 4
 5
 6
