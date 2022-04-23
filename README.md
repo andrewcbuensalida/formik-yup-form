@@ -58,9 +58,8 @@ if there needs to be changes in feature1, when you need to pause development on 
     git stash
     OR
     git stash push -m 'name of stash'
-then fix feature1, then
+then fix feature1, then to update pull request
     git push
-
 
 then when you want to get back the stash, check the stash with
     git stash list
