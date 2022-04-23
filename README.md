@@ -25,7 +25,8 @@ to update tracking branches with remote branches, then
     git difftool origin/staging
 to see the diff of what others have done to make sure there's no conflict, then 
     git rebase origin/staging
-this is to make sure the changes made by other developers that are in remote staging get merged into your local feature branch, but without the extra merge commit because it's rebase, not merge.
+this is to make sure the changes made by other developers that are in remote staging get merged into your local feature branch, but without the extra merge commit because it's rebase, not merge. if there still is a conflict, 
+    git rebase --abort
 
 If you're fairly certain there will be no conflict and you want to save time, skip the difftool and do this
     git pull --rebase origin staging
@@ -48,6 +49,9 @@ now can just do
 then once the feature1 is in the remote repo, do a pull request into staging branch
 
 DONT DO REBASE AFTER PULL REQUEST, just do merge to update if you're still working on your feature branch after making the pull request
+
+to list open pull requests, 
+    gh pr list
 ////////////////////////////////////////////////////////////////////////////////
 to see the freshest branches
     git branch --sort=-committerdate -a
@@ -94,8 +98,4 @@ pull request merges create an extra commit, but pushing directly doesn't.
 
 ////////////////////////////////////////////
 if you try to push to a remote that has been changed, it wont let you, even if it's a different file. have to pull first, then push.
-000
-rebase in gh
-100
-200
-300
+
