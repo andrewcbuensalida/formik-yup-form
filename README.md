@@ -52,6 +52,8 @@ DONT DO REBASE AFTER PULL REQUEST, just do merge to update if you're still worki
 
 to list open pull requests, 
     gh pr list
+
+Once pr is approved on gh, they can delete that branch
 ////////////////////////////////////////////////////////////////////////////////
 to see the freshest branches
     git branch --sort=-committerdate -a
