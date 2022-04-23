@@ -105,10 +105,14 @@ when there's a rebase conflict, fix conflict then
     git rebase --skip
 
 ///////////////////////////////
-when want to overwrite a remote with the local,
+when want to overwrite a remote with the local and there's a conflict,
     git push -f
 
 /////////////////////////////////////
+
+when merging, current change is the one in head(currently looking at) and incoming change is the change you want to apply to the current. It is opposite for rebase.
+
+
 1
 2
 3
