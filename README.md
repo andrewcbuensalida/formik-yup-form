@@ -46,7 +46,7 @@ now can just do
     git push
 then once the feature1 is in the remote repo, do a pull request into staging branch
 
-DONT DO REBASE AFTER PULL REQUEST, just do merge to update if you're still working on your feature branch after making the pull request
+DONT DO REBASE AFTER PULL REQUEST!, just do merge to update if you're still working on your feature branch after making the pull request
 
 to list open pull requests, 
     gh pr list
