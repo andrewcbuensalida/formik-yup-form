@@ -142,3 +142,4 @@ when merging, current change is the one in head(currently looking at) and incomi
 6
 7
 8
+merge strat1
