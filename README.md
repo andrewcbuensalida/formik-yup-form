@@ -155,3 +155,5 @@ And then maybe we can do a quick video call to resolve it.
     git checkout -b 456-bug-fix
 Repeat steps 3 and 4 until no more bugs
 Hopefully the bugs are independent from each another so there's less conflict. 
+
+interactive
