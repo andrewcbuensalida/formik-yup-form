@@ -99,3 +99,21 @@ pull request merges create an extra commit, but pushing directly doesn't.
 ////////////////////////////////////////////
 if you try to push to a remote that has been changed, it wont let you, even if it's a different file. have to pull first, then push.
 
+////////////////////////////////////////
+when there's a rebase conflict, fix conflict then
+    git add .
+    git rebase --skip
+
+///////////////////////////////
+when want to overwrite a remote with the local,
+    git push -f
+
+/////////////////////////////////////
+1
+2
+3
+4
+5
+6
+7
+8
