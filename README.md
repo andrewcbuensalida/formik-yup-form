@@ -1,3 +1,5 @@
+git stuff part 2
+
 https://www.roboleary.net/vscode/2020/09/15/vscode-git.html
 to use vs code as a diff tool
 add this to User/user/.gitconfig
@@ -28,7 +30,7 @@ to see the diff of what others have done to make sure there's no conflict, then
 this is to make sure the changes made by other developers that are in remote staging get merged into your local feature branch, but without the extra merge commit because it's rebase, not merge. if there still is a conflict, 
     git rebase --abort
 
-If you're fairly certain there will be no conflict and you want to save time, skip the difftool and do this
+Actually, this might be better. If you're fairly certain there will be no conflict and you want to save time, skip the difftool and do this
     git pull --rebase origin staging
 git pull first does a git fetch which updates all the tracking branches with its corresponding remote branch, then (if it's just git pull) merges current(head) branch with its tracking branch, but if the origin and remote branch are specified (eg. git pull origin staging) then it will merge that remote branch into the current(head) branch.
 Now you can do the pull request below
@@ -46,7 +48,7 @@ now can just do
     git push
 then once the feature1 is in the remote repo, do a pull request into staging branch
 
-DONT DO REBASE AFTER PULL REQUEST!, just do merge to update if you're still working on your feature branch after making the pull request
+DONT DO REBASE AFTER PULL REQUEST!, just do push to update if you're still working on your feature branch after making the pull request
 
 to list open pull requests, 
     gh pr list
@@ -132,14 +134,24 @@ when want to overwrite a remote with the local and there's a conflict,
 /////////////////////////////////////
 
 when merging, current change is the one in head(currently looking at) and incoming change is the change you want to apply to the current. It is opposite for rebase.
--1
 
-1 testing 
-2
-3
-4
-5work on 3space while waiting for 2space -> with stash instruction to be approved
-6 remote staging conflict 1
-7
-8
-merge strat1
+//////////////////////////////////////////////
+cherrypicker workflow
+I think Malcolm wants to review my code before approving my pull request into staging, so for me do you think this is a good strategy? 
+
+1. make my local staging up-to-date with the remote staging, 
+    git checkout staging
+    git pull origin staging
+2. Then create a new branch with
+    git checkout -b 123-bug-fix
+3. Then when it's ready, to make sure there's no conflict, 
+    git pull --rebase origin staging
+3.a If there's conflict, 
+    git rebase --abort
+And then maybe we can do a quick video call to resolve it. 
+4. If there's no conflict, create a pr with
+    gh pr create --base staging
+5. While waiting for approval, I can work on a different bug, so I create another branch from the first bug fix with
+    git checkout -b 456-bug-fix
+Repeat steps 3 and 4 until no more bugs
+Hopefully the bugs are independent from each another so there's less conflict. 
