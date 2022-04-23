@@ -115,7 +115,7 @@ when merging, current change is the one in head(currently looking at) and incomi
 
 1
 2
-3
+3 remote staging1
 4
 5
 6
