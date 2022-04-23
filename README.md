@@ -139,7 +139,7 @@ when merging, current change is the one in head(currently looking at) and incomi
 3
 4
 5work on 3space while waiting for 2space -> with stash instruction to be approved
-6
+6 remote staging conflict 1
 7
 8
 merge strat1
