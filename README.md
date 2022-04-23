@@ -113,7 +113,7 @@ when want to overwrite a remote with the local and there's a conflict,
 when merging, current change is the one in head(currently looking at) and incoming change is the change you want to apply to the current. It is opposite for rebase.
 
 
-1
+1 2space1
 2
 3 remote staging1
 4
