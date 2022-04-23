@@ -94,5 +94,8 @@ pull request merges create an extra commit, but pushing directly doesn't.
 
 ////////////////////////////////////////////
 if you try to push to a remote that has been changed, it wont let you, even if it's a different file. have to pull first, then push.
-
+000
 rebase in gh
+100
+200
+300
