@@ -1,5 +1,16 @@
 git stuff part 2
 
+/////////////////////////////////////////////
+
+after 
+	git clone https://github.com/cherrypickerdevelopment/cherrypicker-web.git
+	git checkout staging
+this will create a local staging branch
+note that it's not
+	git checkout origin/staging
+
+
+///////////////////////////////////////////
 https://www.roboleary.net/vscode/2020/09/15/vscode-git.html
 to use vs code as a diff tool
 add this to User/user/.gitconfig
