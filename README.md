@@ -161,8 +161,8 @@ I think Malcolm wants to review my code before approving my pull request into st
    Hopefully the bugs are independent from each another so there's less conflict.
 
 interactive
-1
-2
+1 feat1
+2 feat2
 3
 4
 5
