@@ -160,14 +160,6 @@ I think Malcolm wants to review my code before approving my pull request into st
    Repeat steps 3 and 4 until no more bugs
    Hopefully the bugs are independent from each another so there's less conflict.
 
-interactive
-1 feat1
-2 feat2
-3
-4
-5
-6
-7
-8
-9
-10
+///////////////////////////////////////
+
+If a pr is successfully merged, and it is a descendant of other prs, then the ancestor prs will automatically be merged.
