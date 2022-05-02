@@ -163,6 +163,3 @@ I think Malcolm wants to review my code before approving my pull request into st
 ///////////////////////////////////////
 
 If a pr is successfully merged, and it is a descendant of other prs, then the ancestor prs will automatically be merged.
-
-//////
-test reset
