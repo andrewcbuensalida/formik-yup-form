@@ -166,9 +166,9 @@ If a pr-child is successfully merged, and it is a descendant of pr-parent, then 
 
 /////////////////////////////////////////
 can only revert pr merges on github, not commits
-1
+1 b1 b1
 2
-3
+3 b2
 4
 5
 6
