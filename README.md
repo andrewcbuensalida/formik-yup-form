@@ -162,16 +162,7 @@ I think Malcolm wants to review my code before approving my pull request into st
 
 ///////////////////////////////////////
 
-If a pr is successfully merged, and it is a descendant of other prs, then the ancestor prs will automatically be merged.
+If a pr-child is successfully merged, and it is a descendant of pr-parent, then pr-parent will automatically be merged, unless there's a divergence, like pr-parent was edited before pr-child was merged.
 
 /////////////////////////////////////////
 can only revert pr merges on github, not commits
-
-1c1
-2
-3c1
-4
-5
-6
-7
-8
