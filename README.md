@@ -174,3 +174,13 @@ If a pr-child is successfully merged, and it is a descendant of pr-parent, then 
 
 /////////////////////////////////////////
 can only revert pr merges on github, not commits
+
+//////////////////////////////////
+git push
+means it will push the current branch you're in, example feature1 to its corresponding remote feature1 in origin.
+if it's
+git push heroku feature1
+this will merge your local feature1 branch into the remote(heroku) repos feature1 branch.
+if it's
+git push heroku feature1:master
+this will merge local feature1 to remote master.
