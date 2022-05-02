@@ -184,3 +184,17 @@ this will merge your local feature1 branch into the remote(heroku) repos feature
 if it's
 git push heroku feature1:master
 this will merge local feature1 to remote master.
+
+/////////////////////////////////
+if you do
+git pull
+with no arguments, the default is unpredictable.
+it's best to always specify with
+git pull <remote name or url> <branch name>
+this will update all tracking branches, then merge the tracking branch that corresponds with the one you are on
+to make sure, do
+git remote -v
+
+/////////////////////////
+to remove a remote
+git remote rm <remote-name>
