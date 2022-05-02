@@ -159,6 +159,14 @@ I think Malcolm wants to review my code before approving my pull request into st
    git checkout -b 456-bug-fix
    Repeat steps 3 and 4 until no more bugs
    Hopefully the bugs are independent from each another so there's less conflict.
+6. If there is a revision for 123-bug-fix, on 456
+   git stash
+   git checkout 123
+   make changes
+   git push
+   git checkout 456
+   git rebase 123
+   then repeat steps 3 and 4
 
 ///////////////////////////////////////
 
@@ -166,11 +174,3 @@ If a pr-child is successfully merged, and it is a descendant of pr-parent, then 
 
 /////////////////////////////////////////
 can only revert pr merges on github, not commits
-1 b1 b1
-2
-3 b2
-4
-5
-6
-7
-8
