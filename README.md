@@ -158,6 +158,7 @@ I think Malcolm wants to review my code before approving my pull request into st
    gh pr create --base staging
    if pr was already created,
    git push
+   or git push -f if there was a divergence/conflict
 5. While waiting for approval, I can work on a different bug, so I create another branch from the first bug fix with
    git checkout -b 456-bug-fix
    Repeat steps 3 and 4 until no more bugs
