@@ -156,6 +156,8 @@ I think Malcolm wants to review my code before approving my pull request into st
    And then maybe we can do a quick video call to resolve it.
 4. If there's no conflict, create a pr with
    gh pr create --base staging
+   if pr was already created,
+   git push
 5. While waiting for approval, I can work on a different bug, so I create another branch from the first bug fix with
    git checkout -b 456-bug-fix
    Repeat steps 3 and 4 until no more bugs
@@ -166,7 +168,12 @@ I think Malcolm wants to review my code before approving my pull request into st
    make changes
    git push
    git checkout 456
-   git rebase 123
+   git rebase 123 (could also be git pull --rebase origin staging if 123 pr has already been merged)
+   if there's conflict
+   resolve conflict
+   git add .
+   git rebase --continue
+   this will continue with the rebase
    then repeat steps 3 and 4
 
 ///////////////////////////////////////
@@ -216,7 +223,7 @@ git remote rm <remote-name>
 
 ///////////////////////////////////
 1 b1c1 b1c2
-2
+2 b2c1
 3
 4
 5
