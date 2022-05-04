@@ -204,10 +204,10 @@ is used to create then switch
 /////////////////////////
 to remove a remote
 git remote rm <remote-name>
-1
+1 b1c1
 2
 3
 4
 5
-6
+6 b1c2
 7
