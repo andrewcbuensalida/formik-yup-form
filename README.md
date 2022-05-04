@@ -198,3 +198,10 @@ git remote -v
 /////////////////////////
 to remove a remote
 git remote rm <remote-name>
+1
+2
+3
+4
+5
+6
+7
