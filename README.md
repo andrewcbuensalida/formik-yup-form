@@ -202,6 +202,10 @@ git checkout -b
 is used to create then switch
 
 /////////////////////////
+
+if your local branch is behind the upstream branch, cant git push. have to pull first, then push.
+
+//////////////////
 to remove a remote
 git remote rm <remote-name>
 1 b1c1
@@ -210,4 +214,4 @@ git remote rm <remote-name>
 4
 5
 6 b1c2
-7
+7 b2c1
