@@ -128,9 +128,10 @@ if you try to push to a remote that has been changed, it wont let you, even if i
 
 ////////////////////////////////////////
 when there's a rebase conflict, fix conflict then
-git add .
+git rebase --continue
+or
 git rebase --skip
-
+to skip the commit
 ///////////////////////////////
 when want to overwrite a remote with the local and there's a conflict,
 git push -f
