@@ -198,9 +198,9 @@ git remote -v
 /////////////////////////
 to remove a remote
 git remote rm <remote-name>
-1 b1
-2 b1c2
-3 b2
+1 b1c1
+2 b2c1
+3
 4
 5
 6
