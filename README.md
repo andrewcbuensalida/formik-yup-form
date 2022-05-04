@@ -195,6 +195,12 @@ this will update all tracking branches, then merge the tracking branch that corr
 to make sure, do
 git remote -v
 
+//////////////////////////////
+git branch
+is used to delete, modify, create branches
+git checkout -b
+is used to create then switch
+
 /////////////////////////
 to remove a remote
 git remote rm <remote-name>
