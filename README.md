@@ -206,12 +206,18 @@ is used to create then switch
 if your local branch is behind the upstream branch, cant git push. have to pull first, then push.
 
 //////////////////
+
+when a pr has been approved already, then you try to push to it, it will update the remote branch but wont make a pull request.
+//////////////////
+
 to remove a remote
 git remote rm <remote-name>
-1 b1c1
+
+///////////////////////////////////
+1
 2
-3 b2c3
+3
 4
 5
-6 b1c2
-7 b2c1
+6
+7
