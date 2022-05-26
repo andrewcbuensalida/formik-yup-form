@@ -47,7 +47,7 @@ Now you can do the pull request below
 
 ////////////////////////////////////////////////////////////////////
 to make a pr from the cmd, checkout feature branch, then
-gh pr create --base <branch you want to merge into, probably staging>
+gh pr create --base <branch you want to merge into, probably staging (not origin/staging)>
 this will create the feature branch in github, then make a pull request to staging
 
 OR
@@ -223,8 +223,8 @@ to remove a remote
 git remote rm <remote-name>
 
 ///////////////////////////////////
-1 b1c1 b1c2
-2 b2c1
+1
+2
 3
 4
 5
