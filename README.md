@@ -223,10 +223,10 @@ to remove a remote
 git remote rm <remote-name>
 
 ///////////////////////////////////
-1
+1 first
 2
-3
+3 second
 4
-5
+5third
 6
 7
