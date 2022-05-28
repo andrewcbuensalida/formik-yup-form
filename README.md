@@ -230,7 +230,7 @@ To pinpoint which commit a bug was introduced
    git bisect start
 
 ////////////////////////////////////
-1 
+1 pull different remote 
 2
 3
 4
