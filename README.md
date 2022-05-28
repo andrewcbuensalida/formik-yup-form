@@ -231,7 +231,7 @@ To pinpoint which commit a bug was introduced
 
 ////////////////////////////////////
 1 pull different remote 
-2
+2 pull different remote
 3
 4
 5
