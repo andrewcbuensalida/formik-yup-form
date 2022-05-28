@@ -34,8 +34,11 @@ git difftool origin/staging
 workflow is, clone repo, checkout staging, checkout a new feature branch from staging, make changes on feature branch, then when ready to push, on feature branch, do a
 git fetch
 to update tracking branches with remote branches, then
-git difftool origin/staging
-to see the diff of what others have done to make sure there's no conflict, then
+   git difftool origin/staging
+to see the diff of what others have done to make sure there's no conflict, 
+If you want to check the diff of just one file,
+   git difftool <branch or commit> <file path>
+then
 git rebase origin/staging
 this is to make sure the changes made by other developers that are in remote staging get merged into your local feature branch, but without the extra merge commit because it's rebase, not merge. if there still is a conflict,
 git rebase --abort
@@ -223,7 +226,11 @@ to remove a remote
 git remote rm <remote-name>
 
 ///////////////////////////////////
-1
+To pinpoint which commit a bug was introduced
+   git bisect start
+
+////////////////////////////////////
+1 
 2
 3
 4
