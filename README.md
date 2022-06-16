@@ -41,54 +41,54 @@ If you want to check the diff of just one file,
 then
 git rebase origin/staging
 this is to make sure the changes made by other developers that are in remote staging get merged into your local feature branch, but without the extra merge commit because it's rebase, not merge. if there still is a conflict,
-git rebase --abort
+    git rebase --abort
 
 Actually, this might be better. If you're fairly certain there will be no conflict and you want to save time, skip the difftool and do this
-git pull --rebase origin staging
+    git pull --rebase origin staging
 git pull first does a git fetch which updates all the tracking branches with its corresponding remote branch, then (if it's just git pull) merges current(head) branch with its tracking branch, but if the origin and remote branch are specified (eg. git pull origin staging) then it will merge that remote branch into the current(head) branch.
 Now you can do the pull request below
 
 ////////////////////////////////////////////////////////////////////
 to make a pr from the cmd, checkout feature branch, then
-gh pr create --base <branch you want to merge into, probably staging (not origin/staging)>
+    gh pr create --base <branch you want to merge into, probably staging (not origin/staging)>
 this will create the feature branch in github, then make a pull request to staging
 
 OR
 
 (first method is better)have to set an upstream branch with -u for the feature branch with
-git push -u origin feature1
+    git push -u origin feature1
 now can just do
-git push
+    git push
 then once the feature1 is in the remote repo, do a pull request into staging branch
 
 DONT DO REBASE AFTER PULL REQUEST!, just do push to update if you're still working on your feature branch after making the pull request
 
 to list open pull requests,
-gh pr list
+    gh pr list
 
 while waiting for pr approval, can work on feature2 that was branched from feature1
-git checkout -b feature2
+    git checkout -b feature2
 
 if there needs to be changes in feature1, when you need to pause development on feature2, this will remove changes and save it to a stash
-git stash
+    git stash
 OR
-git stash push -m 'name of stash'
+    git stash push -m 'name of stash'
 then fix feature1, then to update pull request
-git push
+    git push
 
 then when you want to get back the stash, check the stash with
-git stash list
+    git stash list
 then, to recover the latest stash
-git stash pop
+    git stash pop
 OR to recover a specific stash
-git stash pop 'stash@{n}'
+    git stash pop 'stash@{n}'
 
 Once pr is approved on gh, they can delete the remote feature1 branch on gh, you can delete local feature1 with
-git branch -D feature1
+    git branch -D feature1
 
 ////////////////////////////////////////////////////////////////////////////////
 to see the freshest branches
-git branch --sort=-committerdate -a
+    git branch --sort=-committerdate -a
 
 ////////////////////////////////////////////////////////////////////////////////
 when there is a divergence in two branches and you try to merge, even if it was in different files, it wont be a fast forward, it will be a recursive strategy, meaning it will create a merge commit.
@@ -100,7 +100,7 @@ even if it gets shifted down, there wont be a conflict.
 /////////////////////////////
 
 if there's a conflict, do
-git merge --abort
+    git merge --abort
 /////////////////////////////////////
 
 if there's an unstaged change on feature, then merge master, it'll say it's already up to date, as long as master didnt change.
@@ -131,13 +131,13 @@ if you try to push to a remote that has been changed, it wont let you, even if i
 
 ////////////////////////////////////////
 when there's a rebase conflict, fix conflict then
-git rebase --continue
+    git rebase --continue
 or
-git rebase --skip
+    git rebase --skip
 to skip the commit
 ///////////////////////////////
 when want to overwrite a remote with the local and there's a conflict,
-git push -f
+    git push -f
 
 /////////////////////////////////////
 
@@ -206,6 +206,8 @@ git pull <remote name or url> <branch name>
 this will update all tracking branches, then merge the tracking branch that corresponds with the one you are on
 to make sure, do
 git remote -v
+This will merge remote master into local mymaster, then merge mymaster into current branch. dont do this.
+   git pull origin master:mymaster
 
 //////////////////////////////
 git branch
