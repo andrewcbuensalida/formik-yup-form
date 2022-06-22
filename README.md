@@ -232,6 +232,13 @@ To pinpoint which commit a bug was introduced
    git bisect start
 
 ////////////////////////////////////
+shortcut for 
+    git add .
+    git commit -m 'asdf'
+is
+    git commit -a -m 'asdf'
+
+////////////////////////////////
 1 
 2
 3
