@@ -237,6 +237,15 @@ shortcut for
     git commit -m 'asdf'
 is
     git commit -a -m 'asdf'
+    
+//////////////////////////////////////
+Draft PRs can't be merged unless the creator makes it ready. Anyone can still make reviews on it though.
+
+In case you just want the PR to be a draft
+   gh pr create --base develop --draft
+   
+To make a draft PR ready, go to the branch that has the PR
+   gh pr ready <optional branch>
 
 ////////////////////////////////
 1 draft pr test 1
